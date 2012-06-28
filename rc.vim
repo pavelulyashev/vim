@@ -135,7 +135,6 @@
 
     " Edit
     set backspace=indent,eol,start " Allow backspace to remove indents, newlines and old tex"
-    set virtualedit=all         " on virtualedit for all mode
 
     set confirm
     set numberwidth=1              " Keep line numbers small if it's shown
@@ -498,7 +497,7 @@
         nnoremap <silent> ,gw :call rc#RGrep()<CR>
 
         " Open new tab
-        call rc#Map_ex_cmd("<C-W>t", ":tabnew")
+        " call rc#Map_ex_cmd("<C-W>t", ":tabnew")
 
         " Tab navigation
         map <A-1> 1gt
@@ -531,7 +530,7 @@
         nnoremap <silent> <leader>f :NERDTreeFind<CR>
 
         " Toggle NERDTRee and Tagbar
-        nnoremap <F2> :call rc#NTToggle()<CR>
+        " nnoremap <F2> :call rc#NTToggle()<CR>
         
         " Toggle tagbar
         call rc#Map_ex_cmd("<F3>", "TagbarToggle")
@@ -540,8 +539,8 @@
         call rc#Toggle_option("<F7>", "wrap")      " Переключение переноса слов
 
         " Close files
-        call rc#Map_ex_cmd("<F10>", "qa")
-        call rc#Map_ex_cmd("<S-F10>", "qa!")
+        " call rc#Map_ex_cmd("<F10>", "qa")
+        " call rc#Map_ex_cmd("<S-F10>", "qa!")
 
         " Session UI
         nnoremap <Leader>ss :call rc#SessionInput('Save')<CR>
@@ -554,12 +553,12 @@
     " ------------
 
         " Allow command line editing like emacs
-        cnoremap <C-A>      <Home>
-        cnoremap <C-B>      <Left>
-        cnoremap <C-E>      <End>
-        cnoremap <C-F>      <Right>
-        cnoremap <C-N>      <Down>
-        cnoremap <C-P>      <Up>
+        " cnoremap <C-A>      <Home>
+        " cnoremap <C-B>      <Left>
+        " cnoremap <C-E>      <End>
+        " cnoremap <C-F>      <Right>
+        " cnoremap <C-N>      <Down>
+        " cnoremap <C-P>      <Up>
 
     " }}}
 
@@ -585,8 +584,8 @@
 
 " Local settings
 " ================
-if filereadable($HOME . "/.vim_local")
-    source $HOME/.vim_local
+if filereadable($HOME . "/.vim/local.vim")
+    source $HOME/.vim/local.vim
 endif
 
 
