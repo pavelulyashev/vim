@@ -17,10 +17,18 @@ set cmdheight=1
 set noincsearch
 let mapleader = '\'
 
+" Key bind helper
+fun! Map_ex_cmd(key, cmd) "{{{ 
+execute "nmap ".a:key." " . ":".a:cmd."<CR>"
+execute "cmap ".a:key." " . "<C-C>:".a:cmd."<CR>"
+execute "imap ".a:key." " . "<C-O>:".a:cmd."<CR>"
+execute "vmap ".a:key." " . "<Esc>:".a:cmd."<CR>gv"
+endfun "}}} 
 
-call rc#Map_ex_cmd("<C-W>t", ":tabnew .")
-call rc#Map_ex_cmd("<C-W>v", ":vs .")
-call rc#Map_ex_cmd("<leader>s", ":w")
+
+call Map_ex_cmd("<C-W>t", ":tabnew .")
+call Map_ex_cmd("<C-W>v", ":vs .")
+call Map_ex_cmd("<leader>s", ":w")
 
 " netrw settings
 let loaded_nerd_tree = 1
@@ -30,8 +38,8 @@ let g:netrw_list_hide= '^.*\.pyc,^\.[^\.\s]\+'
 
 " mouse settings
 set mouse=a
-call rc#Map_ex_cmd("<leader>mr", ":set mouse=r")
-call rc#Map_ex_cmd("<leader>ma", ":set mouse=a")
+call Map_ex_cmd("<leader>mr", ":set mouse=r")
+call Map_ex_cmd("<leader>ma", ":set mouse=a")
  
 
 
