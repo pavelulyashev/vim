@@ -1,6 +1,8 @@
 set t_Co=256
 colorscheme wombat256mod
 
+syntax on
+
 set cursorcolumn
 set cursorline
 highlight ColorColumn ctermbg=30
