@@ -21,42 +21,19 @@ set cmdheight=1
 set noincsearch
 let mapleader = '\'
 
-" Key bind helper
-fun! Map_ex_cmd(key, cmd) "{{{ 
-execute "nmap ".a:key." " . ":".a:cmd."<CR>"
-execute "cmap ".a:key." " . "<C-C>:".a:cmd."<CR>"
-execute "imap ".a:key." " . "<C-O>:".a:cmd."<CR>"
-execute "vmap ".a:key." " . "<Esc>:".a:cmd."<CR>gv"
-endfun "}}} 
-
-
-call Map_ex_cmd("<C-W>t", ":tabnew .")
-call Map_ex_cmd("<C-W>v", ":vs .")
-call Map_ex_cmd("<leader>s", ":w")
+call rc#Map_ex_cmd("<C-W>t", ":tabnew .")
+call rc#Map_ex_cmd("<C-W>v", ":vs .")
+call rc#Map_ex_cmd("<leader>s", ":w")
 
 " netrw settings
-let loaded_nerd_tree = 1
 let g:netrw_preview = 1
 let g:netrw_liststyle = 1
 let g:netrw_list_hide= '^.*\.pyc,^\.[^\.\s]\+' 
 
 " mouse settings
 set mouse=a
-call Map_ex_cmd("<leader>mr", ":set mouse=r")
-call Map_ex_cmd("<leader>ma", ":set mouse=a")
- 
-
-
-" python-mode settings
-let g:pymode_lint_hold = 0
-let g:pymode_syntax_builtin_objs = 1
-let g:pymode_syntax_builtin_funcs = 1
-let g:pymode_rope_goto_def_newwin = 1
-let g:pymode_syntax_print_as_function = 1
-let g:pymode_syntax_highlight_exceptions = 1
-let g:pymode_lint_jump = 1
-let g:pymode_lint_ignore = 'E501,W901'
-
+call rc#Map_ex_cmd("<leader>mr", ":set mouse=r")
+call rc#Map_ex_cmd("<leader>ma", ":set mouse=a")
 
 " disable xtemplates
 let g:__XPT_VIM__ = 1
