@@ -1,42 +1,15 @@
-[submodule "bundle/nerdtree.git"]
-	path = bundle/nerdtree.git
-	url = https://github.com/scrooloose/nerdtree.git
 [submodule "bundle/nerdcommenter.git"]
 	path = bundle/nerdcommenter.git
 	url = https://github.com/scrooloose/nerdcommenter.git
-[submodule "bundle/surround.git"]
-	path = bundle/surround.git
-	url = https://github.com/tpope/vim-surround.git
 [submodule "bundle/vim-pathogen.git"]
 	path = bundle/vim-pathogen.git
 	url = https://github.com/tpope/vim-pathogen.git
-[submodule "bundle/vim-fugitive.git"]
-	path = bundle/vim-fugitive.git
-	url = https://github.com/tpope/vim-fugitive.git
-[submodule "bundle/vim-haml.git"]
-	path = bundle/vim-haml.git
-	url = https://github.com/tpope/vim-haml.git
-[submodule "bundle/gist-vim.git"]
-	path = bundle/gist-vim.git
-	url = https://github.com/mattn/gist-vim.git
 [submodule "bundle/fakeclip.git"]
 	path = bundle/fakeclip.git
 	url = https://github.com/kana/vim-fakeclip.git
 [submodule "bundle/hsmode.git"]
 	path = bundle/hsmode.git
 	url = git://github.com/klen/hsmode.git
-[submodule "xptemplate.git"]
-	path = bundle/xptemplate.git
-	url = https://github.com/drmingdrmer/xptemplate.git
-[submodule "bundle/vim-orgmode.git"]
-	path = bundle/vim-orgmode.git
-	url = https://github.com/jceb/vim-orgmode.git
 [submodule "bundle/tagbar.git"]
 	path = bundle/tagbar.git
 	url = https://github.com/majutsushi/tagbar.git
-[submodule "bundle/solarized"]
-	path = bundle/solarized
-	url = https://github.com/altercation/vim-colors-solarized.git
-[submodule "bundle/webapi-vim.git"]
-	path = bundle/webapi-vim.git
-	url = https://github.com/mattn/webapi-vim.git
